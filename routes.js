@@ -17,7 +17,6 @@ const { Navigator, Screen } = createStackNavigator();
 
      </NavigationContainer>
    );
-
 }
 
 export default Routes;
