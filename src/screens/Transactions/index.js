@@ -71,7 +71,6 @@ const Transactions = () => {
 
           <Ionicons name="remove-circle-outline" size={25} color="#e92929" />
         </RectButton>
-
       </View >
     );
   }

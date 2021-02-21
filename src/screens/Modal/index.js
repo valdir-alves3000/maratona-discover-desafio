@@ -103,5 +103,4 @@ const Modal = () => {
     </View>
   );
 }
-
 export default Modal;
