@@ -11,7 +11,24 @@ import api from '../../services/api';
 
 import styles from './styles';
 
-const Transactions = (props) => {
+const Transactions = () => {
+  
+ const [transactionsList, setTransactionsList] = useState([]);
+  
+  async function handleGetTransactions() {
+    try {
+      const response = await api.get('transactions');
+      if (response) {
+        setTransactionsList(response.data);
+      }
+
+    } catch (error) {
+    }
+  }
+
+  useEffect(() => {          
+    handleGetTransactions();    
+  }, [transactionsList]);  
 
   const Item = ({ description, amount, date, id, expense }) => {
 
@@ -88,7 +105,7 @@ const Transactions = (props) => {
           </View>
 
           <FlatList
-            data={props}
+            data={transactionsList}
             keyExtractor={transaction => String(transaction.id)}
             renderItem={renderItem}
           />

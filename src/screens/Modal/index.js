@@ -25,7 +25,7 @@ const Modal = () => {
   };
 
   function handleGoHome() {
-    navigation.navigate('Home', data);    
+    navigation.navigate('Home');    
   }
 
   async function handleAddTransactions() {    
@@ -85,13 +85,11 @@ const Modal = () => {
 
         <View style={styles.btnGroup}>
           <RectButton
-            onPress={() => { }}
+            onPress={handleGoHome}
             style={[styles.btn, styles.btnCancel]}>
-            <Link
-              to="/Home"
-            >
+            
               <Text style={styles.btnText}>Cancelar</Text>
-            </Link>
+          
           </RectButton>
 
           <RectButton
