@@ -11,7 +11,7 @@ import api from '../../services/api';
 
 import styles from './styles';
 
-const Transactions = () => {
+const Transactions = ({props}) => {
   
  const [transactionsList, setTransactionsList] = useState([]);
   
@@ -28,7 +28,7 @@ const Transactions = () => {
 
   useEffect(() => {          
     handleGetTransactions();    
-  }, [transactionsList]);  
+  }, [props]);  
 
   const Item = ({ description, amount, date, id, expense }) => {
 
@@ -68,7 +68,6 @@ const Transactions = () => {
         <RectButton
           onPress={remove}
         >
-
           <Ionicons name="remove-circle-outline" size={25} color="#e92929" />
         </RectButton>
       </View >

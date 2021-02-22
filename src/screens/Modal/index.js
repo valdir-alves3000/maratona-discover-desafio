@@ -25,7 +25,7 @@ const Modal = () => {
   };
 
   function handleGoHome() {
-    navigation.navigate('Home');    
+    navigation.navigate('Home', data);    
   }
 
   async function handleAddTransactions() {    
@@ -71,7 +71,7 @@ const Modal = () => {
             style={styles.checkbox}
             value={isChecked}
             onValueChange={setChecked}
-            color={isChecked ? '#4630EB' : undefined}
+            color={isChecked ? '#2d4a22' : undefined}
           />
           <Text style={styles.paragraph}>Marque em caso de despesas</Text>
         </View>
